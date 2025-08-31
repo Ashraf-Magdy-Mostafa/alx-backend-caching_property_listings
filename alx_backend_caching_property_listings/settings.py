@@ -47,14 +47,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'alx_backend_caching_property_listings.wsgi.application'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('POSTGRES_DB', 'property_db'),
         'USER': os.environ.get('POSTGRES_USER', 'property_user'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'property_pass'),
-        'HOST': os.environ.get('POSTGRES_HOST', 'postgres'),
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
         'PORT': int(os.environ.get('POSTGRES_PORT', '5432')),
     }
 }
